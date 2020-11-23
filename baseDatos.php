@@ -1,6 +1,6 @@
 <?php 
 
-class BaseDatos{
+class baseDatos{
 
     //VARIABLES
 
@@ -48,6 +48,75 @@ class BaseDatos{
         }
 
     }
+    public function buscarDatos($consultaSQL)
+    {
+        //1. Conectarme a la BaseDatos
+        $conectarBD=$this -> conectarBD();
+
+        //2. Preparar la Consulta
+
+        $consultaBuscarDatos = $conectarBD -> prepare ($consultaSQL);
+
+        //3. Indicar metodo para listar los Datos
+        
+        $consultaBuscarDatos -> setFetchMode(PDO::FETCH_ASSOC);
+
+        //4. Ejecutar la consulta 
+
+        $consultaBuscarDatos -> execute ();
+
+        // 5. Mostrar los datos buscados
+
+        return($consultaBuscarDatos->fetchAll());
+
+    }
+
+    public function eliminarDatos($consultaSQL)
+    {
+        //1. Conectarme a la Base de Datos
+
+        $conectarBD=$this -> conectarBD();
+        
+        //2. Preparar la consulta 
+
+        $consultaEliminarDatos = $conectarBD -> prepare($consultaSQL);
+
+        // 3. Ejecutar la consulta 
+
+        $resultado=$consultaEliminarDatos -> execute();
+
+        //4. Verifique el resultado
+
+        if ($resultado){
+            echo("Registro eliminado con éxito");
+        }else{
+            echo ("Error eliminado el registro");
+        }
+    }
+
+    public function editarDatos($consultaSQL)
+    {
+        //Conexión con la BaseDatos
+
+        $conectarBD=$this -> conectarBD();
+        
+        //Preparar Consulta
+
+        $consultaEditarDatos = $conectarBD -> prepare($consultaSQL);
+
+        // 3. Ejecutar la consulta 
+
+        $resultado=$consultaEditarDatos -> execute();
+
+        //4. Verifique el resultado
+
+        if ($resultado){
+            echo("Registro editado con éxito");
+        }else{
+            echo ("Error editando el registro");
+        }
+    }
+
 
 }
 

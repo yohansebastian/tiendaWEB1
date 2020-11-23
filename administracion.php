@@ -36,7 +36,7 @@
                             <a class="nav-link" href="administracion.php">Administración</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="bodegas.php" tabindex="-1">Bodegas</a>
+                            <a class="nav-link " href="bodegas(ListarProductos).php" tabindex="-1">Bodegas</a>
                         </li>
                     </ul>
 
@@ -63,6 +63,12 @@
                 <input type="text" class="form-control" id="precio" placeholder="Digite el precio del producto"
                     name="precio">
             </div>
+            <div class="row mt-3">  
+                    <div class="col">
+                        <label>Foto</label>
+                        <input class="form-control" rows="4" name="foto" placeholder="Foto URL"></textarea>
+                    </div>
+                </div>
             <br>
             <div class="col">
                 <label>Descripción:</label>
@@ -71,7 +77,7 @@
             <br>
             <br>
 
-            <button type="submit" class="btn btn-success btn-lg btn-block" name="enviar">Enviar</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block" name="enviar">Enviar </button>
         </div>
     </form>
 
