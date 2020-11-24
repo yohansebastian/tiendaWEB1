@@ -1,0 +1,10 @@
+body{
+    background: url(../img/fondoClaro.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.fondo{
+    background: url(../img/FONDORECETAS.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+

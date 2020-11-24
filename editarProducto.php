@@ -1,7 +1,7 @@
 <?php 
 
 
-include("baseDatos.php")
+include("baseDatos.php");
 
 if(isset($_POST["botonEditar"])){
 
@@ -9,7 +9,7 @@ if(isset($_POST["botonEditar"])){
 
         $nombre=$_POST["nombreEditar"];
         $marca=$_POST["marcaEditar"];
-        $precio=$_POST["precioEdtiar"];
+        $precio=$_POST["precioEditar"];
         $descripcion=$_POST["descripcionEditar"];
 
 
@@ -30,7 +30,7 @@ if(isset($_POST["botonEditar"])){
 
     // 6. Redireccion
 
-    header("location:bodegas(ListarProductos).php")
+    header("location:bodegas(ListarProductos).php");
 
 
 

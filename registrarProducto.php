@@ -25,6 +25,9 @@ if (isset ($_POST["enviar"])){
 
     $transaccion ->insertDatos($consultaSQL);
 
+    header("location:administracion.php");
+
+
 }
 
 

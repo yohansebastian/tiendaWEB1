@@ -8,9 +8,10 @@
     <!--Boostrap CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/clases2.css">
 </head>
 
-<body>
+<body class="fondo">
 
     <!-- CABECERA-->
 
@@ -45,6 +46,12 @@
         </nav>
 
     </header>
+
+
+    <h1 align="center">Registra Tus Productos</h1>
+    <h3 align="center">Recuerda llenar todos los campos del formulario y escribir el nombre y la marca del producto con buena ortografia </h3>
+
+
 
     <form action="registrarProducto.php" method="POST">
         <div class="container-fluid">
