@@ -19,6 +19,8 @@
 
     $transaccion->eliminarDatos($consultaSQL);
 
+    header("location:bodegas(ListarProductos).php");
+
 
 
 
